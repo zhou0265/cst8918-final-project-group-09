@@ -1,0 +1,56 @@
+# Terraform
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/terraform.tfvars
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/override.tf
+terraform/override.tf.json
+terraform/*_override.tf
+terraform/*_override.tf.json
+
+# Node.js (Remix Weather Application)
+app/node_modules/
+app/npm-debug.log
+app/yarn-error.log
+app/.env
+app/.env.*
+app/dist/
+app/build/
+
+# Azure
+*.azcli
+*.azure
+*.azureProfile
+*.azureAuth
+
+# GitHub Actions
+.github/workflows/*.local
+
+# Sensitive Files
+*.pem
+*.key
+*.cert
+*.pfx
+*.secret
+*.secrets
+credentials.json
+*.tfvars
+
+# Temporary Files
+*.bak
+*.swp
+*~
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Python (if used for scripts)
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
