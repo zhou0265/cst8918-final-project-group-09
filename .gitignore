@@ -8,6 +8,9 @@ terraform/override.tf
 terraform/override.tf.json
 terraform/*_override.tf
 terraform/*_override.tf.json
+terraform/environments/dev/.terraform.lock.hcl
+terraform/environments/dev/.terraform/
+terraform/environments/dev/terraform.tfstate
 
 # Node.js (Remix Weather Application)
 app/node_modules/

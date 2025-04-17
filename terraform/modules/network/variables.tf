@@ -12,7 +12,7 @@ variable "group_number" {
 variable "location" {
   type        = string
   description = "The Azure region to deploy resources"
-  default     = "Canada Central" # You can choose a different default
+  default     = "canadacentral" # You can choose a different default
 }
 
 variable "vnet_address_space" {
