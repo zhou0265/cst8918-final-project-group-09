@@ -1,5 +1,5 @@
 module "network" {
-  source = "../../modules/network"
+  source       = "../../modules/network"
   group_number = "109"
   location     = "Canada Central" # Or your preferred location
 }
