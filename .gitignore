@@ -52,3 +52,10 @@ __pycache__/
 .Python
 env/
 venv/
+# Terraform lock files
+**/.terraform.lock.hcl
+
+# Remix Weather Application additional ignores
+app/.cache/
+app/public/build/
+app/app/.env.bak
