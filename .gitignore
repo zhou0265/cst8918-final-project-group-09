@@ -1,16 +1,12 @@
 # Terraform
-terraform/*.tfstate
-terraform/*.tfstate.*
-terraform/terraform.tfvars
-terraform/.terraform/
-terraform/.terraform.lock.hcl
-terraform/override.tf
-terraform/override.tf.json
-terraform/*_override.tf
-terraform/*_override.tf.json
-terraform/environments/dev/.terraform.lock.hcl
-terraform/environments/dev/.terraform/
-terraform/environments/dev/terraform.tfstate
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
 
 # Node.js (Remix Weather Application)
 app/node_modules/
@@ -38,7 +34,6 @@ app/build/
 *.secret
 *.secrets
 credentials.json
-*.tfvars
 
 # Temporary Files
 *.bak
@@ -49,7 +44,7 @@ credentials.json
 .idea/
 *.log
 
-# Python (if used for scripts)
+# Python (if used)
 *.pyc
 __pycache__/
 *.pyo
