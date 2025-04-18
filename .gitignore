@@ -54,3 +54,8 @@ __pycache__/
 .Python
 env/
 venv/
+app/.env
+app/app/.env.bak
+app/node_modules/
+terraform/environments/dev/.terraform/
+terraform/environments/dev/.terraform.lock.hcl
