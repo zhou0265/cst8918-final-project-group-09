@@ -1,29 +1,29 @@
 variable "resource_group_name_prefix" {
+  description = "Prefix for the resource group name (e.g., cst8918-final-project-group)"
   type        = string
-  description = "Prefix for the resource group name"
   default     = "cst8918-final-project-group"
 }
 
 variable "group_number" {
+  description = "Group number for naming resources (e.g., 09) from Brightspace"
   type        = string
-  description = "Your group number from Brightspace"
 }
 
 variable "location" {
+  description = "Azure region to deploy network resources"
   type        = string
-  description = "The Azure region to deploy resources"
-  default     = "canadacentral" # You can choose a different default
+  default     = "canadacentral"
 }
 
 variable "vnet_address_space" {
+  description = "Address space for the virtual network"
   type        = list(string)
-  description = "The address space for the virtual network"
   default     = ["10.0.0.0/14"]
 }
 
 variable "subnet_prefixes" {
-  type        = map(string)
   description = "Map of subnet names to their address prefixes"
+  type        = map(string)
   default = {
     prod  = "10.0.0.0/16"
     test  = "10.1.0.0/16"
