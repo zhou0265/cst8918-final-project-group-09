@@ -1,24 +1,14 @@
 output "resource_group_name" {
-  value       = azurerm_resource_group.main.name
-  description = "The name of the resource group"
-}
-
-output "resource_group_id" {
-  value       = azurerm_resource_group.main.id
-  description = "The ID of the resource group"
+  description = "The name of the resource group for network resources"
+  value       = azurerm_resource_group.network.name
 }
 
 output "virtual_network_id" {
-  value       = azurerm_virtual_network.main.id
   description = "The ID of the virtual network"
+  value       = azurerm_virtual_network.network.id
 }
 
 output "subnet_ids" {
-  value = {
-    prod  = azurerm_subnet.prod.id
-    test  = azurerm_subnet.test.id
-    dev   = azurerm_subnet.dev.id
-    admin = azurerm_subnet.admin.id
-  }
   description = "A map of subnet names to their IDs"
+  value       = { for name, subnet in azurerm_subnet.subnets : name => subnet.id }
 }
