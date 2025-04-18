@@ -1,38 +1,25 @@
-variable "resource_group_name" {
-  description = "Name of the resource group for the AKS clusters"
-  type        = string
-}
-
 variable "location" {
-  description = "Azure region for the AKS clusters"
-  type        = string
-  default     = "canadacentral"
-}
-
-variable "test_cluster_name" {
-  description = "Name of the AKS cluster for the test environment"
-  type        = string
-  default     = "cst8918-aks-test"
-}
-
-variable "prod_cluster_name" {
-  description = "Name of the AKS cluster for the prod environment"
-  type        = string
-  default     = "cst8918-aks-prod"
-}
-
-variable "test_subnet_id" {
-  description = "ID of the test subnet for the test AKS cluster"
+  description = "The Azure region where the AKS cluster will be deployed"
   type        = string
 }
 
-variable "prod_subnet_id" {
-  description = "ID of the prod subnet for the prod AKS cluster"
+variable "resource_group_name" {
+  description = "The name of the resource group where the AKS cluster will be deployed"
   type        = string
 }
 
-variable "kubernetes_version" {
-  description = "Kubernetes version for the AKS clusters"
+variable "group_number" {
+  description = "The group number to uniquely identify the AKS cluster"
   type        = string
-  default     = "1.32"
+}
+
+variable "node_count" {
+  description = "The number of nodes in the default node pool"
+  type        = number
+  default     = 1
+}
+
+variable "subnet_id" {
+  description = "The ID of the subnet where the AKS cluster will be deployed"
+  type        = string
 }

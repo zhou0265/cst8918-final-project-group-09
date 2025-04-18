@@ -1,10 +1,9 @@
-variable "group_number" {
+variable "location" {
+  description = "The Azure region where resources will be deployed"
   type        = string
-  description = "Group number from Brightspace"
 }
 
-variable "location" {
+variable "group_number" {
+  description = "The group number to uniquely identify resources"
   type        = string
-  description = "Azure region"
-  default     = "Canada Central"
 }
